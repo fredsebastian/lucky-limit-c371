@@ -2,8 +2,107 @@
 import Layout from '../layouts/BlogPost.astro';
 ---
 
-<Layout title="Contact" pubDate={new Date()}>
-  <p style="text-align: justify;">
-    This is the Contact page. More content coming soon.
-  </p>
+<Layout title="Let's Connect" pubDate={new Date()}>
+  <div class="contact-container">
+    <img src="/fred_contact.jpg" alt="Frederick Sebastian" class="profile-pic" />
+
+    <div class="contact-info">
+      <p>
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <title>Email</title>
+          <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+           <polyline points="3 7 12 13 21 7"/>
+        </svg>
+        <strong>Email:</strong>
+         <a href="mailto:professional@fred-sebastian.com">professional@fred-sebastian.com</a>
+      </p>
+
+
+      <p>
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path d="M6.62 10.79a15.091 15.091 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.49 2.5.76 3.83.76a1 1 0 011 1v3.25a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.25a1 1 0 011 1c0 1.33.27 2.63.76 3.83a1 1 0 01-.21 1.11l-2.18 2.21z"/>
+        </svg>
+        <strong>Phone:</strong>
+        +1 (480) 421-8877
+      </p>
+
+      <p>
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm1 7h5.5L15 3.5V9z"/>
+        </svg>
+        <strong>Resume:</strong>
+        <a href="/Fred_Resume.pdf" target="_blank">One-Page Resume (PDF)</a>
+      </p>
+
+      <p>
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path d="M6 2a2 2 0 00-2 2v16c0 1.1.9 2 2 2h12a2 2 0 002-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
+        </svg>
+        <strong>CV:</strong>
+        <a href="/Fred Sebastian CV.pdf" target="_blank">Full CV (PDF)</a>
+      </p>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .contact-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 2em 1em;
+    flex-wrap: wrap;
+  }
+
+  .profile-pic {
+  width: 220px;       /* slightly wider */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;  /* keeps soft corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+  .contact-info {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+
+  .contact-info a {
+    text-decoration: none;
+    color: var(--accent, #0077b5);
+  }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .icon {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 700px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contact-info {
+      text-align: center;
+    }
+
+    .contact-info p {
+      justify-content: center;
+    }
+  }
+</style>
