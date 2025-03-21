@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { SITE_DESCRIPTION } from '../consts';
 ---
 
 <Layout
 	title="Frederick Sebastian"
-	description="Engineer | Scientist | Artist"
+	description={SITE_DESCRIPTION}
 	pubDate={new Date('March 20 2025')}
 	heroImage="/blog-placeholder-about.jpg"
 >
