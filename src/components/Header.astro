@@ -4,76 +4,104 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/projects">Projects</HeaderLink>
-			<HeaderLink href="/publications">Publications</HeaderLink>
-			<HeaderLink href="/cooking">Cooking</HeaderLink>
-			<HeaderLink href="/baking">Baking</HeaderLink>
-			<HeaderLink href="/art">Art</HeaderLink>
-			<HeaderLink href="/poetry">Poetry</HeaderLink>
-			<HeaderLink href="/contact">Contact</HeaderLink>
-		</div>
-		<div class="social-links">
-			<!-- LinkedIn -->
-			<a href="https://www.linkedin.com/in/fredericksebastian/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center;">
-				<span class="sr-only">LinkedIn</span>
-				<svg viewBox="0 0 24 24" width="28" height="28" fill="black" aria-hidden="true" style="margin-right: 0.25em;">
-					<title>LinkedIn</title>
-					<path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.037-1.85-3.037-1.851 0-2.134 1.445-2.134 2.937v5.669H9.356V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.599 0 4.263 2.367 4.263 5.452v6.289zM5.337 7.433c-1.144 0-2.068-.927-2.068-2.068 0-1.141.924-2.068 2.068-2.068 1.141 0 2.068.927 2.068 2.068 0 1.141-.927 2.068-2.068 2.068zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.729v20.542C0 23.229.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.271V1.729C24 .771 23.2 0 22.222 0z"/>
-				</svg>
-			</a>
+  <nav>
+    <h2><a href="/">{SITE_TITLE}</a></h2>
 
-			<!-- Google Scholar -->
-			<a href="https://scholar.google.com/citations?user=jWdoqDEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="scholar" style="display: flex; align-items: center;">
-				<img src="/google-g.svg.png" alt="Google Scholar" width="20" height="20" style="margin-right: 0.1em; filter: grayscale(100%) brightness(0);" />
-				<span style="font-size: 1rem; color: black; position: relative; top: 4px;">Scholar</span>
-			</a>
-		</div>
+    <div class="internal-links">
+      <HeaderLink href="/projects">Projects</HeaderLink>
+      <HeaderLink href="/publications">Publications</HeaderLink>
+      <HeaderLink href="/cooking">Cooking</HeaderLink>
+      <HeaderLink href="/baking">Baking</HeaderLink>
+      <HeaderLink href="/art">Art</HeaderLink>
+      <HeaderLink href="/poetry">Poetry</HeaderLink>
+      <HeaderLink href="/contact">Contact</HeaderLink>
+    </div>
 
-		</div>
-	</nav>
+    <div class="social-links">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/fredericksebastian/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center;">
+        <span class="sr-only">LinkedIn</span>
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="black" aria-hidden="true" style="margin-right: 0.25em;">
+          <title>LinkedIn</title>
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.037-1.85-3.037-1.851 0-2.134 1.445-2.134 2.937v5.669H9.356V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.599 0 4.263 2.367 4.263 5.452v6.289zM5.337 7.433c-1.144 0-2.068-.927-2.068-2.068 0-1.141.924-2.068 2.068-2.068 1.141 0 2.068.927 2.068 2.068 0 1.141-.927 2.068-2.068 2.068zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.729v20.542C0 23.229.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.271V1.729C24 .771 23.2 0 22.222 0z"/>
+        </svg>
+      </a>
+
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com/citations?user=jWdoqDEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="scholar" style="display: flex; align-items: center;">
+        <img src="/google-g.svg.png" alt="Google Scholar" width="20" height="20" style="margin-right: 0.1em; filter: grayscale(100%) brightness(0);" />
+        <span style="font-size: 1rem; color: black; position: relative; top: 4px;">Scholar</span>
+      </a>
+    </div>
+  </nav>
 </header>
 
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links {
-		display: flex;
-		align-items: center;
-		gap: 0.1em;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
+  header {
+    margin: 0;
+    padding: 0 1em;
+    background: white;
+    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap; /* 👈 Ensures wrapping on small screens */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+  .internal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+
+  nav a {
+    padding: 1em 0.5em;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+
+  nav a.active {
+    border-bottom-color: var(--accent);
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  @media (max-width: 720px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .internal-links {
+      margin-top: 0.5em;
+    }
+
+    .internal-links a {
+      padding: 0.5em;
+      font-size: 0.95rem;
+    }
+
+    .social-links {
+      display: none;
+    }
+  }
 </style>
