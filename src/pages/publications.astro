@@ -3,7 +3,331 @@ import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout title="Publications & Patents" pubDate={new Date()}>
-  <p style="text-align: justify;">
-    This is the Publications page. More content coming soon.
-  </p>
+  <div class="pub-list">
+    <div class="pub-entry">
+      <img src="/pubs/isotropy.png" alt="Sclera Anisotropy Publication" />
+      <div class="pub-details">
+        <p class="title">
+          Capturing Sclera Anisotropy Using Direct Collagen Fiber Models. Linking Microstructure to Macroscopic Mechanical Properties.
+          <a href="/pdfs/anisotropy-paper.pdf" target="_blank" class="pdf-link" title="Download PDF">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" class="pdf-icon">
+                <path d="M6 2a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h1v5H8v-5zm3 0h1.5a1.5 1.5 0 0 1 0 3H11v2h-1v-5zm1 2a0.5 0.5 0 0 0 0-1H11v1h1z"/>
+           </svg>
+          <span class="pdf-text">PDF</span>
+          </a>
+        </p>
+    <p class="authors">
+      Ji, F., Islam, M.R., <strong>Sebastian, F.</strong>, Schilpp, H., Wang, B., Hua, Y., Amini, R., & Sigal, I.A.
+    </p>
+    <p class="journal">
+      <a href="https://www.biorxiv.org/content/10.1101/2024.09.12.612702v2" target="_blank">
+        <em>Cold Spring Harbor Laboratory, bioRxiv</em>, 2024
+      </a>
+    </p>
+    </div>
+  </div>
+
+  <div class="pub-entry">
+      <img src="/pubs/meta.png" alt="Sex Distribution Publication" />
+      <div class="pub-details">
+        <p class="title">
+          Meta Data Analysis of Sex Distribution of Study Samples Reported in Summer Biomechanics, Bioengineering, & Biotransport Annual Conference Abstracts.
+          <a href="/pdfs/meta.pdf" target="_blank" class="pdf-link" title="Download PDF">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" class="pdf-icon">
+                <path d="M6 2a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h1v5H8v-5zm3 0h1.5a1.5 1.5 0 0 1 0 3H11v2h-1v-5zm1 2a0.5 0.5 0 0 0 0-1H11v1h1z"/>
+           </svg>
+          <span class="pdf-text">PDF</span>
+          </a>
+        </p>
+    <p class="authors">
+      <strong>Sebastian, F.</strong>, Vargas, A.I., Clarin, J., Hurgoi, A., & Amini, R.
+    </p>
+    <p class="journal">
+      <a href="https://doi.org/10.1115/1.4064032" target="_blank">
+        <em>ASME Journal of Biomechanical Engineering</em>, 2024
+      </a>
+    </p>
+    </div>
+  </div>
+
+    <div class="pub-entry">
+      <img src="/pubs/hydrogel.png" alt="Noninvasive Hydrogel Publication" />
+      <div class="pub-details">
+        <p class="title">
+          Towards GHz Ultrasound Enabled Noninvasive Hydrogel Metrology for Mechanobiology.
+           <a href="/pdfs/hydrogel.pdf" target="_blank" class="pdf-link" title="Download PDF">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" class="pdf-icon">
+                <path d="M6 2a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h1v5H8v-5zm3 0h1.5a1.5 1.5 0 0 1 0 3H11v2h-1v-5zm1 2a0.5 0.5 0 0 0 0-1H11v1h1z"/>
+           </svg>
+          <span class="pdf-text">PDF</span>
+          </a>
+        </p>
+
+    <p class="authors">
+      Manav, Y.A., <strong>Sebastian, F.</strong>, Baskota, A., Kuo, J.C., Amini, R., Lal, A., & Davaji, B.
+    </p>
+    <p class="journal">
+      <a href="https://doi.org/10.1109/MEMS58180.2024.10439458" target="_blank">
+        <em>IEEE Micro Electro Mechanical Systems</em>, 2024
+      </a>
+    </p>
+  </div>
+</div>
+
+ <div class="pub-entry">
+      <img src="/pubs/blood.png" alt="J Biomech Eng Publication" />
+      <div class="pub-details">
+        <p class="title">
+          Impact of Blood Rheology on Transition to Turbulence and Wall Vibration Downstream of a Stenosis
+          <a href="/pdfs/blood.pdf" target="_blank" class="pdf-link" title="Download PDF">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" class="pdf-icon">
+                <path d="M6 2a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h1v5H8v-5zm3 0h1.5a1.5 1.5 0 0 1 0 3H11v2h-1v-5zm1 2a0.5 0.5 0 0 0 0-1H11v1h1z"/>
+           </svg>
+          <span class="pdf-text">PDF</span>
+          </a>
+        </p>
+        <p class="authors">
+          Pinto Costa, R., Nwotchouang, B. S. T., Yao, J., Biswas, D., Casey, D., McKenzie, R., <strong>Sebastian, F.</strong>, Amini, R., Steinman, D. A., & Loth, F.
+        </p>
+        <p class="journal">
+          <a href="https://doi.org/10.1115/1.4055856" target="_blank">
+            <em>ASME Journal of Biomechanical Engineering</em>, 2023
+          </a>
+        </p>
+      </div>
+    </div>
+
+<div class="pub-entry">
+      <img src="/pubs/patent.png" alt="Patent" />
+      <div class="pub-details">
+        <p class="title">
+          Soft Robotic Haptic Interface with Variable Stiffness for Rehabilitation of Sensorimotor Hand Function
+          <a href="/pdfs/US Patent.pdf" target="_blank" class="pdf-link" title="Download PDF">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" class="pdf-icon">
+                <path d="M6 2a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h1v5H8v-5zm3 0h1.5a1.5 1.5 0 0 1 0 3H11v2h-1v-5zm1 2a0.5 0.5 0 0 0 0-1H11v1h1z"/>
+           </svg>
+          <span class="pdf-text">PDF</span>
+          </a>
+        </p>
+
+        <p class="authors">
+          Polygerinos, P., <strong>Sebastian, F.</strong>, Fu, Q., & Santello, M.
+        </p>
+        <p class="journal">
+          <a href="https://patents.google.com/patent/US11446545B2/en" target="_blank">
+           <em>US Patent</em> 11,446,545, 2022
+          </a>
+        </p>
+      </div>
+    </div>
+
+   
+
+    <div class="pub-entry">
+      <img src="/pubs/frontiers.png" alt="Frontiers Publication" />
+      <div class="pub-details">
+        <p class="title">
+          Soft Robotic Haptic Interface with Variable Stiffness for Rehabilitation of Neurologically Impaired Hand Function
+          <a href="/pdfs/frontiers.pdf" target="_blank" class="pdf-link" title="Download PDF">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" class="pdf-icon">
+                <path d="M6 2a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h1v5H8v-5zm3 0h1.5a1.5 1.5 0 0 1 0 3H11v2h-1v-5zm1 2a0.5 0.5 0 0 0 0-1H11v1h1z"/>
+           </svg>
+          <span class="pdf-text">PDF</span>
+          </a>
+        </p>
+        <p class="authors">
+          <strong>Sebastian, F.</strong>, Fu, Q., Santello, M., & Polygerinos, P.
+        </p>
+        <p class="journal">
+          <a href="https://doi.org/10.3389/frobt.2017.00069" target="_blank">
+            <em>Frontiers in Robotics and AI</em>, 2017
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-entry">
+      <img src="/pubs/esoglove.png" alt="ICORR Conference" />
+      <div class="pub-details">
+        <p class="title">
+          Design and Characterization of Low-cost Fabric-based Flat Pneumatic Actuators for Soft Assistive Glove Application
+          <a href="/pdfs/esoglove.pdf" target="_blank" class="pdf-link" title="Download PDF">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" class="pdf-icon">
+                <path d="M6 2a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h1v5H8v-5zm3 0h1.5a1.5 1.5 0 0 1 0 3H11v2h-1v-5zm1 2a0.5 0.5 0 0 0 0-1H11v1h1z"/>
+           </svg>
+          <span class="pdf-text">PDF</span>
+          </a>
+        </p>
+        <p class="authors">
+          Yap, H. K., <strong>Sebastian, F.</strong>, Wiedeman, C., & Yeow, C.
+        </p>
+        <p class="journal">
+        <a href="https://doi.org/10.1109/ICORR.2017.8009454" target="_blank">
+          <em>IEEE International Conference on Rehabilitation Robotics (ICORR)</em>, 2017
+        </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-entry">
+      <img src="/pubs/inverse.png" alt="Under Review TVST" />
+      <div class="pub-details">
+        <p class="title">
+          Image-Based Inverse Modeling Analysis of Iris Stiffness Across Sex in Patients With a History of Angle-Closure Glaucoma
+        </p>
+        <p class="authors">
+          <strong>Sebastian, F.</strong>, DelCiello, H., Pant, A.D., Pathak-Ray, V., Dorairaj, S., & Amini, R.
+        </p>
+        <p class="journal">
+          <em>Translational Vision Science & Technology</em> (under review)
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-entry">
+      <img src="/pubs/lpi.png" alt="Under Review JAMA" />
+      <div class="pub-details">
+        <p class="title">
+          Computational Modeling of Laser Peripheral Iridotomy and the Effects of Size & Location
+        </p>
+        <p class="authors">
+          Pant, A., <strong>Sebastian, F.</strong>, Khoiy, K., Repeto, R., Dorairaj, S., & Amini, R.
+        </p>
+        <p class="journal">
+          <em>JAMA Ophthalmology</em> (under review)
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-entry">
+      <img src="/pubs/environment.png" alt="In Prep" />
+      <div class="pub-details">
+        <p class="title">
+          Assessing the Influence of Environmental Factors and Sex on Porcine Iris Stroma Stiffness through Micro-Indentation
+        </p>
+        <p class="authors">
+          <strong>Sebastian, F.</strong>, Kondiboyina, V., Dorairaj, S., & Amini, R.
+        </p>
+        <p class="journal">
+          <em>ASME Journal of Biomechanical Engineering</em> (in preparation)
+        </p>
+      </div>
+    </div>
+
+    <div class="pub-entry">
+      <img src="/pubs/disagreement.png" alt="In Prep Sclera" />
+      <div class="pub-details">
+        <p class="title">
+          Disagreement Between Structural and Mechanical Anisotropies of Equatorial Sclera
+        </p>
+        <p class="authors">
+          Wang, B., Hua, Y., <strong>Sebastian, F.</strong>, Amini, R., & Sigal, I.A.
+        </p>
+        <p class="journal">
+          <em>(in preparation)</em>
+        </p>
+      </div>
+    </div>
+
+  </div>
+    <!-- Repeat for more publications -->
+  </div>
 </Layout>
+
+<style>
+  .pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+    margin: 2em 0;
+  }
+
+  .pub-entry {
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+  }
+
+  .pub-entry img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0.2em;
+    flex-shrink: 0;
+  }
+
+  .pub-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3em;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .authors {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0;
+  }
+
+  .journal {
+    font-size: 0.85rem;
+    margin: 0;
+    margin-top: -0.2em; /* brings journal line closer to authors */
+  }
+
+  .journal a {
+    color: var(--accent, #0077b5);
+    text-decoration: none;
+  }
+
+  .journal a:hover {
+    text-decoration: underline;
+  }
+
+  .pdf-link {
+  margin-left: 0.4em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  font-size: 0.75rem;
+  color: #666; /* neutral tone */
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.pdf-link:hover {
+  color: #0077b5; /* your site’s accent color */
+}
+
+.pdf-icon {
+  fill: currentColor;
+}
+
+.pdf-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+
+  @media (max-width: 700px) {
+    .pub-entry {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .pub-details {
+      align-items: center;
+    }
+  }
+</style>
