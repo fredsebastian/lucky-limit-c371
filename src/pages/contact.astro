@@ -91,18 +91,21 @@ import Layout from '../layouts/BlogPost.astro';
   }
 
   @media (max-width: 700px) {
-    .contact-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .contact-info {
-      text-align: center;
-    }
-
-    .contact-info p {
-      justify-content: center;
-    }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em 1em;
   }
+
+  .contact-info {
+    width: 100%;
+    max-width: 90vw;
+    text-align: left; /* 👈 keeps alignment on small screens */
+  }
+
+  .contact-info p {
+    justify-content: flex-start; /* 👈 makes icon + label align left */
+  }
+}
+
 </style>
