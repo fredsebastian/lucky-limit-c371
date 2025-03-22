@@ -4,7 +4,8 @@ import Layout from '../layouts/BlogPost.astro';
 
 <Layout title="Publications & Patents" pubDate={new Date()}>
 
-  <h2 style="margin-top: 2em; font-size: 1.2rem;">Peer Reviewed & Published</h2>
+  <h2 class="pub-section">Peer Reviewed & Published</h2>
+
   <div class="pub-list">
     <div class="pub-entry">
       <img src="/pubs/isotropy.png" alt="Sclera Anisotropy Publication" />
@@ -124,7 +125,8 @@ import Layout from '../layouts/BlogPost.astro';
     </div>
 
       
-      <h2 style="margin-top: 2em; font-size: 1.2rem;">Patents</h2>
+     <h2 class="pub-section">Patents</h2>
+
 
       <div class="pub-entry">
         <img src="/pubs/patent.png" alt="Patent" />
@@ -151,7 +153,8 @@ import Layout from '../layouts/BlogPost.astro';
       </div>
 
 
-      <h2 style="margin-top: 2em; font-size: 1.2rem;">Work in Progress</h2>
+     <h2 class="pub-section">Work in Progress</h2>
+
 
     <div class="pub-entry">
       <img src="/pubs/inverse.png" alt="Under Review TVST" />
@@ -233,14 +236,15 @@ import Layout from '../layouts/BlogPost.astro';
   }
 
   .pub-entry img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     margin-top: 0.2em;
     flex-shrink: 0;
   }
+
 
   .pub-details {
     display: flex;
@@ -304,16 +308,52 @@ import Layout from '../layouts/BlogPost.astro';
     line-height: 1;
   }
 
+  .pub-section {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 3em 0 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #ddd;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #444;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+
+
 
   @media (max-width: 700px) {
     .pub-entry {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      gap: 1em;
+      padding: 1em 0;
     }
 
     .pub-details {
       align-items: center;
+      gap: 0.4em;
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .authors, .journal {
+      font-size: 0.8rem;
+    }
+
+    .pdf-text {
+      font-size: 0.75rem;
+    }
+
+    .pub-entry img {
+      width: 125px;
+      height: 125px;
     }
   }
+
 </style>
