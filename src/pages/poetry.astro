@@ -24,19 +24,59 @@ import Layout from '../layouts/BlogPost.astro';
         <div class="poet-block">
           <h4>e. e. cummings</h4>
           <pre class="poem-sample">
-i carry your heart with me(i carry it in  
-my heart)i am never without it(anywhere  
-i go you go,my dear; and whatever is done  
-by only me is your doing,my darling)
+<em>If</em>
+
+If freckles were lovely, and day was night,
+And measles were nice and a lie warn’t a lie,
+Life would be delight,—
+But things couldn’t go right
+For in such a sad plight
+I wouldn’t be I.
+
+If earth was heaven and now was hence,
+And past was present, and false was true,
+There might be some sense
+But I’d be in suspense
+For on such a pretense
+You wouldn’t be you.
+
+If fear was plucky, and globes were square,
+And dirt was cleanly and tears were glee
+Things would seem fair,—
+Yet they’d all despair,
+For if here was there
+We wouldn’t be we.
           </pre>
         </div>
 
-        <div class="poet-block">
+        <div class="poet-block sylvia-block">
           <h4>Sylvia Plath</h4>
           <pre class="poem-sample">
-I shut my eyes and all the world drops dead;  
-I lift my lids and all is born again.  
-(I think I made you up inside my head.)
+<em>Kindness</em>
+
+Kindness glides about my house.
+Dame Kindness, she is so nice!
+The blue and red jewels of her rings smoke
+In the windows, the mirrors
+Are filling with smiles.
+
+What is so real as the cry of a child?
+A rabbit's cry may be wilder
+But it has no soul.
+Sugar can cure everything, so Kindness says.
+Sugar is a necessary fluid,
+
+Its crystals a little poultice.
+O kindness, kindness
+Sweetly picking up pieces!
+My Japanese silks, desperate butterflies,
+May be pinned any minute, anesthetized.
+
+And here you come, with a cup of tea
+Wreathed in steam.
+The blood jet is poetry,
+There is no stopping it.
+You hand me two children, two roses.
           </pre>
         </div>
       </div>
@@ -113,6 +153,13 @@ yet seeks the silence underground
   color: #2c2c2c;
 }
 
+/* Custom paper for Sylvia */
+.sylvia-block {
+  background: url('/textures/paper-texture-light-2.jpg') repeat;
+  background-size: cover;
+}
+
+
 .poet-block h4 {
   margin-top: 0;
   font-size: 1rem;
@@ -163,6 +210,12 @@ yet seeks the silence underground
 @media (max-width: 900px) {
   .poetry-samples {
     grid-template-columns: 1fr;
+  }
+
+.poetry-container {
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow-x: hidden; 
   }
 
   .poet-block h4,
