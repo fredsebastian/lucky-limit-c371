@@ -160,6 +160,13 @@ yet seeks the silence underground
   background-size: cover;
 }
 
+.poem-sample {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+
 
 .poet-block h4 {
   margin-top: 0;
@@ -215,27 +222,36 @@ yet seeks the silence underground
 
   .poet-block {
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
-    padding: 1.2em;
-    font-size: 0.9rem;
+    padding: 1em;
+    font-size: 0.85rem;
     line-height: 1.5;
+    word-break: break-word;
+    background-size: contain; /* prevent texture from stretching */
+    background-clip: padding-box;
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 0 auto;
   }
 
   .poetry-container {
     padding-left: 1em;
     padding-right: 1em;
-    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .poet-block h4,
   .poem-title,
   .poem-meta {
     text-align: center;
+    font-size: 0.95rem;
   }
 
   .poem-body {
     text-align: justify;
   }
 }
+
 
 </style>
