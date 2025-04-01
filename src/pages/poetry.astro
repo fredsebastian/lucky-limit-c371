@@ -144,14 +144,15 @@ yet seeks the silence underground
 .poet-block {
   background: url('/textures/paper-texture-light.jpg') repeat;
   background-size: cover;
-  padding: 1.5em;
+  padding: 1.0em; /* smaller */
   border-radius: 6px;
   font-family: 'Georgia', serif;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  font-size: 0.96rem;
-  line-height: 1.6;
+  font-size: 0.94rem; /* slightly smaller */
+  line-height: 1.5;
   color: #2c2c2c;
 }
+
 
 /* Custom paper for Sylvia */
 .sylvia-block {
@@ -212,10 +213,18 @@ yet seeks the silence underground
     grid-template-columns: 1fr;
   }
 
-.poetry-container {
+  .poet-block {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.2em;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .poetry-container {
     padding-left: 1em;
     padding-right: 1em;
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
 
   .poet-block h4,
@@ -228,4 +237,5 @@ yet seeks the silence underground
     text-align: justify;
   }
 }
+
 </style>
