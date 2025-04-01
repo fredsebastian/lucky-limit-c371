@@ -3,7 +3,176 @@ import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout title="Poetry" pubDate={new Date()}>
-  <p style="text-align: justify;">
-    This is the Poetry page. More content coming soon.
-  </p>
+  <div class="poetry-full-wrap">
+    <div class="poetry-container">
+
+      <!-- Background intro block -->
+      <div class="poetry-intro">
+        <p>
+          Poetry has long served as a quiet counterpart to my technical work — a space to reflect, explore language, and process experience through rhythm and metaphor.
+        </p>
+        <p>
+          I’m particularly inspired by the formal experimentation of <strong>e. e. cummings</strong> and the introspective clarity of <strong>Sylvia Plath</strong>. Their work reminds me that structure and emotion can coexist powerfully.
+        </p>
+        <p>
+          Below are selected poems from recent years. These pieces reflect themes of identity, memory, place, and the shifting relationships we hold with ourselves and the world.
+        </p>
+      </div>
+
+      <!-- Two-column poet samples -->
+      <div class="poetry-samples">
+        <div class="poet-block">
+          <h4>e. e. cummings</h4>
+          <pre class="poem-sample">
+i carry your heart with me(i carry it in  
+my heart)i am never without it(anywhere  
+i go you go,my dear; and whatever is done  
+by only me is your doing,my darling)
+          </pre>
+        </div>
+
+        <div class="poet-block">
+          <h4>Sylvia Plath</h4>
+          <pre class="poem-sample">
+I shut my eyes and all the world drops dead;  
+I lift my lids and all is born again.  
+(I think I made you up inside my head.)
+          </pre>
+        </div>
+      </div>
+
+      <!-- Your poetry -->
+      <div class="poetry-list">
+        <div class="poem">
+          <h3 class="poem-title">Unrooted</h3>
+          <p class="poem-meta">March 2024 · On migration & memory</p>
+          <pre class="poem-body">
+a sapling dreams in foreign earth  
+its roots unsure, its limbs unbound  
+it bends with wind it cannot name  
+yet seeks the silence underground
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+/* Outer wrap with background gradient */
+.poetry-full-wrap {
+  width: 100vw;
+  margin-left: calc(-1 * ((100vw - 100%) / 2));
+  background: linear-gradient(to bottom, #fdfaf7 0%, #ffffff 100%);
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+
+/* Centered content container */
+.poetry-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1em 1em 2em; /* top 1em instead of 2em */
+}
+
+
+/* Background section */
+.poetry-intro {
+  background: #fdfaf7;
+  padding: 0em 1.25em; /* smaller padding */
+  border-left: 4px solid #e2b88f;
+  border-radius: 6px;
+  font-family: 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #3a3a3a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: justify;
+  margin-top: 0;        /* Ensure there's no extra top margin */
+  margin-bottom: 1em; /* Reduce space below it */
+}
+
+/* Poet samples - 2 columns */
+.poetry-samples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+/* Poet blocks */
+.poet-block {
+  background: url('/textures/paper-texture-light.jpg') repeat;
+  background-size: cover;
+  padding: 1.5em;
+  border-radius: 6px;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #2c2c2c;
+}
+
+.poet-block h4 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #5a3e2b;
+  margin-bottom: 0.7em;
+}
+
+/* Your poems */
+.poetry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  margin-top: 3em;
+  font-family: 'Georgia', serif;
+}
+
+.poem {
+  border-left: 4px solid #d4a373;
+  padding-left: 1em;
+}
+
+.poem-title {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #1e1e1e;
+  margin-bottom: 0.2em;
+}
+
+.poem-meta {
+  font-size: 0.85rem;
+  color: #6e6e6e;
+  font-style: italic;
+  margin-bottom: 0.6em;
+}
+
+.poem-body {
+  white-space: pre-wrap;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #2f2f2f;
+  background-color: #fdfaf7;
+  padding: 1.25em;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .poetry-samples {
+    grid-template-columns: 1fr;
+  }
+
+  .poet-block h4,
+  .poem-title,
+  .poem-meta {
+    text-align: center;
+  }
+
+  .poem-body {
+    text-align: justify;
+  }
+}
+</style>
