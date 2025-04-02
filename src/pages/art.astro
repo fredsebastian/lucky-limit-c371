@@ -3,7 +3,339 @@ import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout title="Art" pubDate={new Date()}>
-  <p style="text-align: justify;">
-    This is the Art page. More content coming soon.
-  </p>
+  <div class="art-full-wrap">
+    <div class="art-row">
+      <div class="art-container">
+        <p>
+          I taught myself <strong>pen rendering</strong> — a technique I continue to practice and refine today. I draw inspiration from artists like <strong>Alphonso Dunn</strong>, whose teachings in traditional ink work helped me appreciate the power of restraint, texture, and precision.
+        </p>
+        <p>
+          Art, for me, began quietly — a side practice to help me process time, space, and memory. What kept it alive was gifting pieces to people I care about, often drawings of their favorite animated characters. I’m especially drawn to the intricacy you can achieve with <strong>micropens</strong>. There’s something meditative about building form with nothing but fine lines. Over time, I hope to expand into <strong>landscape drawing</strong>, where the interpretations are looser and space feels more open.
+        </p>
+        <p>
+          Here is a gallery of selected works — a mix of early sketches and more finished pieces. It’s not meant to be polished, just honest.
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel" id="carousel">
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="carousel-track">
+              <div class="carousel-slide">
+                <img src="/fred.jpg" alt="Roots I" />
+                <p class="caption">Roots I (2023) — ink on paper</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/fred_contact.jpg" alt="Echoes" />
+                <p class="caption">Echoes (2022) — digital mixed media</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/fred.jpg" alt="Study: Overlap" />
+                <p class="caption">Study: Overlap (2021) — ink sketch</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/fred_contact.jpg" alt="Migration I" />
+                <p class="caption">Migration I (2022) — pen and charcoal</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/fred.jpg" alt="Early Sketch" />
+                <p class="caption">Early sketch (2020) — ballpoint pen</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn prev" onclick="plusSlides(-1)">‹</button>
+          <button class="carousel-btn next" onclick="plusSlides(1)">›</button>
+        </div>
+      </div>
+    </div>
+
+  
+
+ <div class="art-collage-grid">
+    <div class="art-tile" data-img="/fred.jpg" data-caption="Roots I (2023) — ink on paper">
+      <img src="/fred.jpg" alt="Roots I" />
+    </div>
+    <div class="art-tile wide" data-img="/fred_contact.jpg" data-caption="Echoes (2022) — digital mixed media">
+      <img src="/fred_contact.jpg" alt="Echoes" />
+    </div>
+    <div class="art-tile tall" data-img="/fred.jpg" data-caption="Study: Overlap (2021) — ink sketch">
+      <img src="/fred.jpg" alt="Study" />
+    </div>
+    <div class="art-tile" data-img="/fred_contact.jpg" data-caption="Migration I (2022) — pen and charcoal">
+      <img src="/fred_contact.jpg" alt="Migration" />
+    </div>
+    <div class="art-tile" data-img="/fred.jpg" data-caption="Early Sketch (2020) — ballpoint pen">
+      <img src="/fred.jpg" alt="Early Sketch" />
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="art-modal" id="artModal">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <img id="modalImg" src="" alt="Art full view" />
+    <p id="modalCaption"></p>
+  </div>
+
+
+<style>
+  .art-full-wrap {
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+    background: linear-gradient(to bottom, #fdfaf7 0%, #ffffff 100%);
+    padding: 1em 0;
+    font-family: 'Georgia', serif;
+    margin-top: 0;        /* Ensure there's no extra top margin */
+    margin-bottom: 1em; /* Reduce space below it */
+  }
+
+  .art-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2em;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1em 1em 1em;
+    align-items: stretch;
+    align-items: stretch;
+    margin-top: 0;        /* Ensure there's no extra top margin */
+    margin-bottom: 1em; /* Reduce space below it */
+  }
+
+  .art-container {
+    flex: 1 1 55%;
+    min-width: 300px;
+    text-align: justify;
+    padding: 0.8em;
+    background: #fffefb;
+    border-left: 4px solid #e2b88f;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #3a3a3a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;        /* Ensure there's no extra top margin */
+    margin-bottom: 0em; /* Reduce space below it */
+  }
+
+  .art-container p {
+    margin-bottom: 0.2em;
+  }
+
+  .carousel-container {
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em;
+    background: #fffefb;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+  }
+
+  .carousel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carousel-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+
+  .caption {
+    margin-top: 0.5em;
+    font-size: 0.9rem;
+    color: #6e6e6e;
+    font-style: italic;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.4em 0.6em;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .carousel-btn.prev { left: 0.5em; }
+  .carousel-btn.next { right: 0.5em; }
+  .carousel-btn:hover { background: rgba(0,0,0,0.6); }
+
+  .art-container,
+  .carousel-container {
+    height: 100%;
+  }
+
+  .carousel-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  .carousel-slide img {
+    max-height: 100%;
+    object-fit: contain;
+    margin: auto;
+  }
+
+
+  .art-collage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 160px;
+    gap: 0.5em;
+    margin: 2em auto 0;
+    max-width: 1100px;
+    padding: 0 1em;
+  }
+
+  .art-tile {
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+  }
+
+  .art-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .art-tile:hover img {
+    transform: scale(1.05);
+  }
+
+  .art-tile.wide { grid-column: span 2; }
+  .art-tile.tall { grid-row: span 2; }
+
+  .art-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(10, 10, 10, 0.85);
+    padding-top: 60px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  .art-modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 6px;
+    margin-bottom: 1em;
+  }
+
+  .art-modal p {
+    color: #ddd;
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @media (max-width: 768px) {
+    .art-row {
+      flex-wrap: wrap;
+    }
+
+    .carousel-btn {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        const track = document.querySelector('#carousel-track');
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      function plusSlides(n) {
+        currentIndex = (currentIndex + n + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      setInterval(() => {
+        plusSlides(1);
+      }, 5000);
+
+      // Modal logic for art collage
+      document.querySelectorAll('.art-tile').forEach(tile => {
+        tile.addEventListener('click', () => {
+          const modal = document.getElementById('artModal');
+          const modalImg = document.getElementById('modalImg');
+          const modalCaption = document.getElementById('modalCaption');
+
+          modalImg.src = tile.dataset.img;
+          modalCaption.textContent = tile.dataset.caption;
+          modal.style.display = 'block';
+        });
+      });
+
+      window.closeModal = function () {
+        document.getElementById('artModal').style.display = 'none';
+      };
+    });
+  </script>
+
 </Layout>
