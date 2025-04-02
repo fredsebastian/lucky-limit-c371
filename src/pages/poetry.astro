@@ -12,12 +12,27 @@ import Layout from '../layouts/BlogPost.astro';
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll(".journal-entry").forEach(el => {
+    // Fade-in observer for journal entries
+    document.querySelectorAll(".journal-entry").forEach((el, i) => {
       el.classList.add("invisible");
+      el.style.transitionDelay = `${i * 100}ms`; // adds a delay per poem
       observer.observe(el);
+    });
+
+    // Back-to-top button logic
+    const scrollBtn = document.querySelector(".back-to-top-floating");
+    scrollBtn.style.display = "none"; // hide initially
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.style.display = "flex";
+      } else {
+        scrollBtn.style.display = "none";
+      }
     });
   });
 </script>
+
 
 <Layout title="Poetry" pubDate={new Date()}>
   <div class="poetry-full-wrap">
@@ -243,6 +258,11 @@ I’m nothin’ but a storyteller
       </div>
     </div>
   </div>
+
+  <button class="back-to-top-floating" aria-label="Scroll back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+  ↑
+  </button>
+
 </Layout>
 
 <style>
@@ -435,8 +455,42 @@ I’m nothin’ but a storyteller
   }
 }
 
+.journal-entry:nth-child(odd) {
+  background-color: #fffef9; /* light vanilla or parchment-like */
+}
+
+.journal-entry:nth-child(even) {
+  background-color: #f8f5f2; /* slightly darker hue */
+}
+
+
+.back-to-top-floating {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: #d4a373;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Georgia', serif;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top-floating:hover {
+  background-color: #b67440;
+}
+
+
 /* Responsive tweaks */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .poetry-samples {
     grid-template-columns: 1fr;
   }
@@ -454,6 +508,7 @@ I’m nothin’ but a storyteller
     overflow: hidden;
     border-radius: 6px;
     margin: 0 auto;
+    margin-bottom: 2.5em;
   }
 
   .poetry-container {
