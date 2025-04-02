@@ -183,8 +183,7 @@ You hand me two children, two roses.
         <p class="poem-meta">April 2018 · On dignity</p>
         <h3 class="poem-title">Her Hurt is Our Blood</h3>
         <pre class="poem-body">
-      What’s this pain? Chest full of thorns, 
-      heart full of hate, mind…full,
+      What’s this pain? Chest full of thorns, heart full of hate, mind…full,
       Lips are cold, this pain is not mine, this light is dull.
       Help.
       Guilt ridden. I am not, but she is calm,
@@ -344,6 +343,18 @@ You hand me two children, two roses.
   }
 }
 
+.poem-body {
+  white-space: pre-wrap; /* already there — good */
+  word-break: break-word; /* <-- ADD THIS if not present */
+  overflow-wrap: break-word; /* <-- ADD THIS */
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #2f2f2f;
+  background-color: #fdfaf7;
+  padding: 1.25em;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
 
 
 /* Optional: slight lift on hover for journal blocks (desktop only) */
@@ -404,6 +415,7 @@ You hand me two children, two roses.
   font-family: 'Georgia', serif;
   word-break: break-word;
   overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .journal-entry.invisible {
