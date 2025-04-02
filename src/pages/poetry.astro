@@ -1,6 +1,23 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
 ---
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target); // only animate once
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".journal-entry").forEach(el => {
+      el.classList.add("invisible");
+      observer.observe(el);
+    });
+  });
+</script>
 
 <Layout title="Poetry" pubDate={new Date()}>
   <div class="poetry-full-wrap">
@@ -82,17 +99,150 @@ You hand me two children, two roses.
       </div>
 
       <!-- Your poetry -->
-      <div class="poetry-list">
-        <div class="poem">
-          <h3 class="poem-title">Unrooted</h3>
-          <p class="poem-meta">March 2024 · On migration & memory</p>
-          <pre class="poem-body">
-a sapling dreams in foreign earth  
-its roots unsure, its limbs unbound  
-it bends with wind it cannot name  
-yet seeks the silence underground
-          </pre>
-        </div>
+      <div class="poem journal-entry">
+        <p class="poem-meta">March 2025 · On friends & their support</p>
+        <h3 class="poem-title">Weathering With You</h3>
+        <pre class="poem-body">
+      An armor since birth.
+      Cuirass for a mental storm, 
+      Greaves for a harsh spat.
+      First heartbreak dons a sallet’s weight.
+      Betrayal tightens the vambrace plate. 
+      Gauntlets sleeved for life’s distrust.
+      Plackart hardened with self-doubt.
+      Sabatons – 
+      For the lonely strides. 
+
+      Then an embrace,
+      An ear to shoulder the burden.
+      Honesty unmarred by loyalty. 
+      Every act of your grace, unlaces the pressure of steel,
+      My unguarded rebrace, beneath the aegis you wield.
+      My years of sheath,
+      Now undone – 
+      Like brittle scales 
+      Slipping from my skin in your undying sun. 
+
+      its roots unsure, its limbs unbound  
+      it bends with wind it cannot name  
+      yet seeks the silence underground
+        </pre>
+      </div>
+
+      <div class="poem journal-entry">
+        <p class="poem-meta">February 2025 · On belonging</p>
+        <h3 class="poem-title">Roots</h3>
+        <pre class="poem-body">
+      A sapling ready to root, 
+      unsure of the sun or the light. 
+      One root here, another there —
+      one in knowing, one in hope, 
+      two in maybe, three in definite —
+      four too many, 
+      five entangled, 
+      none of permanence. None of peace. 
+
+      The mess — entangled. The love — unbound. 
+      Uproot one, unravel a hundred. 
+      Sever the head, prune the edge. 
+      Growth: a promise tied to soil’s demise.
+      Religious watering —
+      Only for sodden roots. 
+
+        </pre>
+      </div>
+
+      <div class="poem journal-entry">
+        <p class="poem-meta">August 2024 · On hope</p>
+        <h3 class="poem-title">Boston</h3>
+        <pre class="poem-body">
+      Like a dark chamber
+      My chest is filled with void.
+      Even then bliss still flicker,
+      Like flickering light in a void dark chamber.
+
+      Like dried stump
+      My hands have grown numb,
+      Even then sensation still gather,
+      Like gathering moist on a numb dried stump.
+
+      Like morning dew
+      My tears are incessantly beading. 
+      Even then vision still glimmer,  
+      Like glimmering sun through a beading morning dew. 
+
+      Like autumnal leaves
+      My lips have gone arid.
+      Even then gratitude in my voice spring, 
+      Like springing blooms from arid autumnal leaves.
+
+        </pre>
+      </div>
+
+      <div class="poem journal-entry">
+        <p class="poem-meta">April 2018 · On dignity</p>
+        <h3 class="poem-title">Her Hurt is Our Blood</h3>
+        <pre class="poem-body">
+      What’s this pain? Chest full of thorns, heart full of hate, mind…full,
+      Lips are cold, this pain is not mine, this light is dull.
+      Help.
+      Guilt ridden. I am not, but she is calm,
+      I trace the stain on my palm. 
+      He was not me, but I am him. Men.
+      All because he could, will and can.
+      Why would he?
+      But…would I? 
+      I can’t help, I can’t empathize, what can I?
+      A wallowing sigh.
+      Agony is real when it’s a face you know,
+      I feel sympathy, but it’s not a pity show.
+      She suffered, is suffering, will suffer, because of him – me. 
+      I give her my shoulder but the burden slips off the blood.
+      Fix? Is solution only after a lustful brood?
+      No it’s not okay even if she was actually a dude.
+      Don’t justify, 
+      All validations nullified. 
+      Rape is not a crime that has a tagged fine,
+      A butcher’s meat is more dignified than 
+      This oh so prevalent “crime”
+      Because his cleaver assures a consent!
+
+
+        </pre>
+      </div>
+
+      <div class="poem journal-entry">
+        <p class="poem-meta">April 2015 · On love</p>
+        <h3 class="poem-title">Stroyteller</h3>
+        <pre class="poem-body">
+      Like a rushing wave, you flood me with joy
+      Quickly receding, all recalled
+      Like dry beach, a beautiful pain
+      I trickle the sand with nothing to gain
+
+      I long the touch, and yearn the smell
+      Of your mind and all of mine
+      Senses fail, so does all
+      But you persist like bygone dew,
+      And the drizzle time has eschewed
+
+      I beg you to come, I plead you to leave.
+      Please Lord turn my feet,
+      My head is willing, my mind is weak,
+      My heart needs not another need
+
+      I’m afraid, but not dismayed,
+      I am sad, but I am glad,
+      I’m unsettled, but not troubled, 
+      I am sure you’ve deciphered
+      I’m nothin’ but a storyteller
+
+
+
+        </pre>
+      </div>
+
+
       </div>
     </div>
   </div>
@@ -156,7 +306,7 @@ yet seeks the silence underground
 
 /* Custom paper for Sylvia */
 .sylvia-block {
-  background: url('/textures/paper-texture-light-2.jpg') repeat;
+  background: url('/textures/paper-texture-light_2.jpg') repeat;
   background-size: cover;
 }
 
@@ -166,8 +316,6 @@ yet seeks the silence underground
   overflow-wrap: break-word;
 }
 
-
-
 .poet-block h4 {
   margin-top: 0;
   font-size: 1rem;
@@ -175,43 +323,104 @@ yet seeks the silence underground
   margin-bottom: 0.7em;
 }
 
-/* Your poems */
-.poetry-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5em;
-  margin-top: 3em;
+
+
+/* Optional: Add a journal font */
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Optional: slight lift on hover for journal blocks (desktop only) */
+@media (hover: hover) {
+  .journal-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+}
+
+.journal-entry {
+  background: #fffefb;
+  border: 1px solid #e8e2d0;
+  padding: 1.5em;
+  transition: transform 0.3s ease;
+  margin-top: 1em;
+  border-radius: 8px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.03);
+  font-family: 'Georgia', serif;
+  position: relative;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 1.6em,
+    #f1eee8 1.6em,
+    #f1eee8 1.65em
+  );
+}
+
+/* Date like a journal heading */
+.journal-entry .poem-meta {
+  font-size: 0.8rem;
+  color: #a3865d;
+  font-family: 'Georgia', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4em;
+}
+
+/* Optional: Handwriting font for title */
+.journal-entry .poem-title {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 0.2em;
+  color: #423324;
+  text-align: left;
+}
+
+/* Poem body inside journal */
+.journal-entry .poem-body {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #3d3d3d;
   font-family: 'Georgia', serif;
 }
 
-.poem {
-  border-left: 4px solid #d4a373;
-  padding-left: 1em;
+.journal-entry.invisible {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.poem-title {
-  font-size: 1.35rem;
-  font-weight: bold;
-  color: #1e1e1e;
-  margin-bottom: 0.2em;
+.journal-entry.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.poem-meta {
-  font-size: 0.85rem;
-  color: #6e6e6e;
-  font-style: italic;
-  margin-bottom: 0.6em;
-}
 
-.poem-body {
-  white-space: pre-wrap;
-  line-height: 1.8;
-  font-size: 1.05rem;
-  color: #2f2f2f;
-  background-color: #fdfaf7;
-  padding: 1.25em;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+/* Optional: slight lift on hover for journal blocks (desktop only) */
+@media (hover: hover) {
+  .journal-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
 }
 
 /* Responsive tweaks */
