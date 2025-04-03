@@ -139,7 +139,7 @@ import Layout from '../layouts/BlogPost.astro';
       <div class="baking-tile" data-img="/bake/greenmac.jpg" data-caption="Baked good">
         <img src="/bake/greenmac.jpg" alt="Baked good" />
       </div>
-      <div class="baking-tile wide" data-img="/bake/greenmacin.jpg" data-caption="Baked good">
+      <div class="baking-tile" data-img="/bake/greenmacin.jpg" data-caption="Baked good">
         <img src="/bake/greenmacin.jpg" alt="Baked good" />
       </div>
       <div class="baking-tile tall" data-img="/bake/keylime.jpg" data-caption="Baked good">
@@ -154,7 +154,7 @@ import Layout from '../layouts/BlogPost.astro';
       <div class="baking-tile wide" data-img="/bake/lemonbrownie.jpg" data-caption="Baked good">
         <img src="/bake/lemonbrownie.jpg" alt="Baked good" />
       </div>
-      <div class="baking-tile tall" data-img="/bake/lemontart.jpg" data-caption="Baked good">
+      <div class="baking-tile" data-img="/bake/lemontart.jpg" data-caption="Baked good">
         <img src="/bake/lemontart.jpg" alt="Baked good" />
       </div>
       <div class="baking-tile wide" data-img="/bake/macred.jpg" data-caption="Baked good">
@@ -175,7 +175,7 @@ import Layout from '../layouts/BlogPost.astro';
       <div class="baking-tile" data-img="/bake/oatchoc.jpg" data-caption="Baked good">
         <img src="/bake/oatchoc.jpg" alt="Baked good" />
       </div>
-      <div class="baking-tile wide" data-img="/bake/oatmealchoc.jpg" data-caption="Baked good">
+      <div class="baking-tile" data-img="/bake/oatmealchoc.jpg" data-caption="Baked good">
         <img src="/bake/oatmealchoc.jpg" alt="Baked good" />
       </div>
       <div class="baking-tile tall" data-img="/bake/orange.jpg" data-caption="Baked good">
@@ -220,7 +220,7 @@ import Layout from '../layouts/BlogPost.astro';
       <div class="baking-tile tall" data-img="/bake/stickytoffee.jpg" data-caption="Baked good">
         <img src="/bake/stickytoffee.jpg" alt="Baked good" />
       </div>
-      <div class="baking-tile tall" data-img="/bake/strawbbar.jpg" data-caption="Baked good">
+      <div class="baking-tile wide" data-img="/bake/strawbbar.jpg" data-caption="Baked good">
         <img src="/bake/strawbbar.jpg" alt="Baked good" />
       </div>
       <div class="baking-tile tall" data-img="/bake/suntomato2.jpg" data-caption="Baked good">
@@ -253,10 +253,10 @@ import Layout from '../layouts/BlogPost.astro';
       <div class="baking-tile" data-img="/bake/whitechocpie.jpg" data-caption="Baked good">
         <img src="/bake/whitechocpie.jpg" alt="Baked good" />
       </div>
-      <div class="baking-tile wide" data-img="/bake/wwsourdough.jpg" data-caption="Baked good">
+      <div class="baking-tile" data-img="/bake/wwsourdough.jpg" data-caption="Baked good">
         <img src="/bake/wwsourdough.jpg" alt="Baked good" />
       </div>
-      <div class="baking-tile wide" data-img="/bake/yellowmac.jpg" data-caption="Baked good">
+      <div class="baking-tile" data-img="/bake/yellowmac.jpg" data-caption="Baked good">
         <img src="/bake/yellowmac.jpg" alt="Baked good" />
       </div>
       <div class="baking-tile" data-img="/bake/zatarsd.jpg" data-caption="Baked good">
@@ -392,6 +392,7 @@ import Layout from '../layouts/BlogPost.astro';
       margin: 2em auto 0;
       max-width: 1100px;
       padding: 0 1em;
+      grid-auto-flow: dense;
     }
 
     .baking-tile {
