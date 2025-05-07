@@ -3,7 +3,548 @@ import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout title="Cooking" pubDate={new Date()}>
-  <p style="text-align: justify;">
-    This is the Cooking page. More content coming soon.
-  </p>
+  <div class="cooking-full-wrap">
+    <div class="cooking-row">
+      <div class="cooking-container">
+        <p>
+          Cooking is one of my quiet joys — a creative process rooted in comfort, memory, and a deep love for food that warms the heart. It’s also something I never thought I’d get into. In fact, I still struggle with calling myself a baker.
+        </p>
+        <p>
+          What used to put me off — the chemistry, the precision, the patience — are the very reasons I now indulge in it. I’ve even started venturing into bread making, particularly sourdough, for the challenge and the unmatched smell of fresh loaves filling the house.
+        </p>
+        <p>
+          My biggest pull to bake is the opportunity to share it. As someone without much of a sweet tooth, I find joy in making treats for others — it’s the sharing that gives me permission to keep cooking. My personal favorite? A classic New York cheesecake. But I also love the adventure of trying to master things like macarons, even if they drive me slightly mad.
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel" id="carousel">
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="carousel-track">
+              <div class="carousel-slide">
+                <img src="/bake/biscoffmain.jpg" alt="Biscoff Cheesecake" />
+                <p class="caption">Biscoff Cheesecake</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/bake/carrot.jpg" alt="Carrot Cake with Earl Grey Cream Cheese Frosting" />
+                <p class="caption">Carrot Cake with Earl Grey Cream Cheese Frosting</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/bake/currysdmain.jpg" alt="Coconut and Curry Sourdough<" />
+                <p class="caption">Coconut and Curry Sourdough</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/bake/chocmac.jpg" alt="Chocolate Macarons" />
+                <p class="caption">Chocolate Macarons with Espresso & Kahlua Filling Topped with Salted Caramel Drizzle</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/bake/keylime.jpg" alt="Key Lime Pie" />
+                <p class="caption">Key Lime Pie</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/bake/lemontart.jpg" alt="Lemon Tart" />
+                <p class="caption">Lemon Tart</p>
+              </div>
+              <div class="carousel-slide">
+                <img src="/bake/orange.jpg" alt="Orange Cardamom Olive Cake" />
+                <p class="caption">Orange Cardamom Olive Cake</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn prev" onclick="plusSlides(-1)">‹</button>
+          <button class="carousel-btn next" onclick="plusSlides(1)">›</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cooking-collage-grid">
+      <div class="cooking-tile" data-img="/bake/100wwsd.jpg" data-caption="100% Wholewheat Sourdough">
+        <img src="/bake/100wwsd.jpg" alt="100% Wholewheat Sourdough" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/bakcake.jpg" data-caption="Saffron & Pistachio Baklava Cake">
+        <img src="/bake/bakcake.jpg" alt="Saffron & Pistachio Baklava Cake" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/bakcake2.jpg" data-caption="Saffron & Pistachio Baklava Cake">
+        <img src="/bake/bakcake2.jpg" alt="Saffron & Pistachio Baklava Cake" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/baklava.jpg" data-caption="Pistachio & Walnut Baklava">
+        <img src="/bake/baklava.jpg" alt="Pistachio & Walnut Baklava" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/biscoff.jpg" data-caption="Biscoff Cheesecake">
+        <img src="/bake/biscoff.jpg" alt="Biscoff Cheesecake" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/biscoffmain.jpg" data-caption="Biscoff Cheesecake Perspectives">
+        <img src="/bake/biscoffmain.jpg" alt="Biscoff Cheesecake Perspectives" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/bluemac.jpg" data-caption="Macarons with Lemon Buttercream">
+        <img src="/bake/bluemac.jpg" alt="Macarons with Lemon Buttercream" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/breadpud.jpg" data-caption="Bourbon Brown Sugar Bread Pudding">
+        <img src="/bake/breadpud.jpg" alt="Bourbon Brown Sugar Bread Pudding" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/browniebar.jpg" data-caption="Walnut Brownie Pie Bar">
+        <img src="/bake/browniebar.jpg" alt="Walnut Brownie Pie Bar" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/bundt.jpg" data-caption="Brown Butter Banana Bundt Cake">
+        <img src="/bake/bundt.jpg" alt="Brown Butter Banana Bundt Cake" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/bwsesamesd.PNG" data-caption="Black & White Sesame Sourdough">
+        <img src="/bake/bwsesamesd.PNG" alt="Black & White Sesame Sourdough" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/caramelthumb.jpg" data-caption="Salted Caramel Thumbprint Cookies with Cinnamon Sugar">
+        <img src="/bake/caramelthumb.jpg" alt="Salted Caramel Thumbprint Cookies with Cinnamon Sugar" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/carrot.jpg" data-caption="Carrot Cake with Earl Grey Cream Cheese Frosting">
+        <img src="/bake/carrot.jpg" alt="Carrot Cake with Earl Grey Cream Cheese Frosting" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/chaitir.jpg" data-caption="Masala Chai Tiramisu">
+        <img src="/bake/chaitir.jpg" alt="Masala Chai Tiramisu" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/cherry.jpg" data-caption="Cherry Tart">
+        <img src="/bake/cherry.jpg" alt="Cherry Tart" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/choccup.jpg" data-caption="Sourdough Chocolate Cupcakes">
+        <img src="/bake/choccup.jpg" alt="Sourdough Chocolate Cupcakes" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/chocmac.jpg" data-caption="Chocolate Macarons with Espresso & Kahlua Filling Topped with Salted Caramel Drizzle">
+        <img src="/bake/chocmac.jpg" alt="Chocolate Macarons with Espresso & Kahlua Filling Topped with Salted Caramel Drizzle" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/chocpecan.jpg" data-caption="Chocolate Pecan Caramels">
+        <img src="/bake/chocpecan.jpg" alt="Chocolate Pecan Caramels" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/choctir.jpg" data-caption="Chocolate Coffee Tres Leches">
+        <img src="/bake/choctir.jpg" alt="Chocolate Coffee Tres Leches" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/currysd.jpg" data-caption="Coconut and Curry Sourdough">
+        <img src="/bake/currysd.jpg" alt="Coconut and Curry Sourdough" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/currysdmain.jpg" data-caption="Coconut and Curry Sourdough">
+        <img src="/bake/currysdmain.jpg" alt="Coconut and Curry Sourdough" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/devil.jpg" data-caption="Chef Ottolenghi's Devil's Food Cake with Hazelnut Praline">
+        <img src="/bake/devil.jpg" alt="Chef Ottolenghi's Devil's Food Cake with Hazelnut Praline" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/evbagelsd.jpg" data-caption="Everything Bagel Sourdough">
+        <img src="/bake/evbagelsd.jpg" alt="Everything Bagel Sourdough" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/fruitcake.jpg" data-caption="Upside Down Kiwi and Peach Cake">
+        <img src="/bake/fruitcake.jpg" alt="Upside Down Kiwi and Peach Cake" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/garlicpull.jpg" data-caption="Pull Apart Galic Bread">
+        <img src="/bake/garlicpull.jpg" alt="Pull Apart Galic Bread" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/gochujang.jpg" data-caption="Gochujang Caramel Cookies">
+        <img src="/bake/gochujang.jpg" alt="Gochujang Caramel Cookies" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/greenmac.jpg" data-caption="Dark Chocolate Macarons">
+        <img src="/bake/greenmac.jpg" alt="Dark Chocolate Macarons" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/greenmacin.jpg" data-caption="Dark Chocolate Macarons (filling view)">
+        <img src="/bake/greenmacin.jpg" alt="Dark Chocolate Macarons (filling view" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/keylime.jpg" data-caption="Key Lime Pie">
+        <img src="/bake/keylime.jpg" alt="Key Lime Pie" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/keylime2.jpg" data-caption="Key Lime Pie">
+        <img src="/bake/keylime2.jpg" alt="Key Lime Pie" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/lemonbar.jpg" data-caption="Lemon Bar with Candied Lemon">
+        <img src="/bake/lemonbar.jpg" alt="Lemon Bar with Candied Lemon" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/lemonbrownie.jpg" data-caption="Lemon Brownie">
+        <img src="/bake/lemonbrownie.jpg" alt="Lemon Brownie" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/lemontart.jpg" data-caption="Lemon Tart">
+        <img src="/bake/lemontart.jpg" alt="Lemon Tart" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/macred.jpg" data-caption="Macaron with Chocolate Ganache and Homemade Raspberry Jam">
+        <img src="/bake/macred.jpg" alt="Macaron with Chocolate Ganache and Homemade Raspberry Jam" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/miso.jpg" data-caption="Miso Chocolate Chip Cookies">
+        <img src="/bake/miso.jpg" alt="Miso Chocolate Chip Cookies" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/nanaimo.jpg" data-caption="Canadian Nanaimo Bar">
+        <img src="/bake/nanaimo.jpg" alt="Canadian Nanaimo Bar" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/nanaimomain.jpg" data-caption="Canadian Nanaimo Bar">
+        <img src="/bake/nanaimomain.jpg" alt="Canadian Nanaimo Bar" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/nuttellabrownie.jpg" data-caption="Nutella & Sea Salt Brownie">
+        <img src="/bake/nuttellabrownie.jpg" alt="Nutella & Sea Salt Brownie" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/oatchoc.jpg" data-caption="Brown Butter Oatmeal Chocolate Chip Cookies">
+        <img src="/bake/oatchoc.jpg" alt="Brown Butter Oatmeal Chocolate Chip Cookies" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/oatmealchoc.jpg" data-caption="Brown Butter Oatmeal Chocolate Chip Cookies">
+        <img src="/bake/oatmealchoc.jpg" alt="Brown Butter Oatmeal Chocolate Chip Cookies" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/orange.jpg" data-caption="Orange Cardamom Olive Cake">
+        <img src="/bake/orange.jpg" alt="Orange Cardamom Olive Cake" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/orangemac.jpg" data-caption="Cinnamon Cream Cheese and Dulce de Leche Macaron">
+        <img src="/bake/orangemac.jpg" alt="Cinnamon Cream Cheese and Dulce de Leche Macaron" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/pbmac.jpg" data-caption="Peanut Butter Macarons with Dark Chocolate Drizzle">
+        <img src="/bake/pbmac.jpg" alt="Peanut Butter Macarons with Dark Chocolate Drizzle" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/peachcake.jpg" data-caption="Upside Down Peach Cake">
+        <img src="/bake/peachcake.jpg" alt="Upside Down Peach Cake" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/pecanpiebar.jpg" data-caption="Pecan Pie Bar">
+        <img src="/bake/pecanpiebar.jpg" alt="Pecan Pie Bar" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/pineapplebar.jpg" data-caption="Pineapple Bars with Almonds">
+        <img src="/bake/pineapplebar.jpg" alt="Pineapple Bars with Almonds" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/redmac.jpg" data-caption="Chocolate Macarons">
+        <img src="/bake/redmac.jpg" alt="Chocolate Macarons" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/sd1.jpg" data-caption="Marjoram Sordough">
+        <img src="/bake/sd1.jpg" alt="Marjoram Sordough" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/sd2.jpg" data-caption="Herbs de Provence Sourdough">
+        <img src="/bake/sd2.jpg" alt="Herbs de Provence Sourdough" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/sd3.JPG" data-caption="Sourdough Crumb View">
+        <img src="/bake/sd3.JPG" alt="Sourdough Crumb View" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/sdloaf.jpg" data-caption="Sourdough Sandwich Loaf">
+        <img src="/bake/sdloaf.jpg" alt="Sourdough Sandwich Loaf" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/sdtwin.jpg" data-caption="Couple of my first sourdoughs">
+        <img src="/bake/sdtwin.jpg" alt="Couple of my first sourdoughs" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/snicker.jpg" data-caption="Honey Spiced Snickerdoodles">
+        <img src="/bake/snicker.jpg" alt="Honey Spiced Snickerdoodles" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/stickytoffee.jpg" data-caption="Sticky Toffee Pudding">
+        <img src="/bake/stickytoffee.jpg" alt="Sticky Toffee Pudding" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/strawbbar.jpg" data-caption="Strawberry Ginger Oatmeal Bars">
+        <img src="/bake/strawbbar.jpg" alt="Strawberry Ginger Oatmeal Bars" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/suntomato2.jpg" data-caption="Dual-Colored Sundried Tomatoes and Cheddar Sourdough">
+        <img src="/bake/suntomato2.jpg" alt="Dual-Colored Sundried Tomatoes and Cheddar Sourdough" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/suntomatoe.jpg" data-caption="Sundried Tomatoes and Cheddar Sourdough">
+        <img src="/bake/suntomatoe.jpg" alt="Sundried Tomatoes and Cheddar Sourdough" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/swirlcake.jpg" data-caption="Cinnamon Cardamom Swirl Loaf">
+        <img src="/bake/swirlcake.jpg" alt="Cinnamon Cardamom Swirl Loaf" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/tahini.jpg" data-caption="Tahini & Earl Grey Choc Chip Cookies">
+        <img src="/bake/tahini.jpg" alt="Tahini & Earl Grey Choc Chip Cookies" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/tresleches.jpg" data-caption="Tres Leches Cake">
+        <img src="/bake/tresleches.jpg" alt="Tres Leches Cake" />
+      </div>
+      <div class="cooking-tile tall" data-img="/bake/ube.jpg" data-caption="Ube Pie with Coconut & Pecan">
+        <img src="/bake/ube.jpg" alt="Ube Pie with Coconut & Pecan" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/walnutcake.jpg" data-caption="Pear & Pecan Spiced Cake">
+        <img src="/bake/walnutcake.jpg" alt="Pear & Pecan Spiced CakeBaked good" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/wedding.jpg" data-caption="Coconut Lime Mexican Wedding Cookies">
+        <img src="/bake/wedding.jpg" alt="Coconut Lime Mexican Wedding Cookies" />
+      </div>
+      <div class="cooking-tile wide" data-img="/bake/weddingmain.jpg" data-caption="Coconut Lime Mexican Wedding Cookies">
+        <img src="/bake/weddingmain.jpg" alt="Coconut Lime Mexican Wedding Cookies" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/whitechocpie.jpg" data-caption="White Chocolate Raspberry Tart">
+        <img src="/bake/whitechocpie.jpg" alt="White Chocolate Raspberry Tart" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/wwsourdough.jpg" data-caption="Wholewheat Sourdough">
+        <img src="/bake/wwsourdough.jpg" alt="Wholewheat Sourdough" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/yellowmac.jpg" data-caption="Lemon Buttercream Macarons">
+        <img src="/bake/yellowmac.jpg" alt="Lemon Buttercream Macarons" />
+      </div>
+      <div class="cooking-tile" data-img="/bake/zatarsd.jpg" data-caption="Za'atar Sourdough">
+        <img src="/bake/zatarsd.jpg" alt="Za'atar Sourdough" />
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="cooking-modal" id="cookingModal">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <img id="modalImg" src="" alt="Full view" />
+      <p id="modalCaption"></p>
+    </div>
+  </div>
+
+  <style>
+    /* SAME STYLES as art page */
+    .cooking-full-wrap {
+      width: 100vw;
+      margin-left: calc(-1 * ((100vw - 100%) / 2));
+      background: linear-gradient(to bottom, #fdfaf7 0%, #ffffff 100%);
+      padding: 1em 0;
+      font-family: 'Georgia', serif;
+    }
+
+    .cooking-row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 2em;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1em 1em 1em;
+      align-items: stretch;
+    }
+
+    .cooking-container {
+      flex: 1 1 55%;
+      min-width: 300px;
+      text-align: justify;
+      padding: 0.8em;
+      background: #fffefb;
+      border-left: 4px solid #e2b88f;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #3a3a3a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cooking-container p {
+      margin-bottom: 0.6em;
+    }
+
+    .carousel-container {
+      flex: 1 1 45%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0.5em;
+      background: #fffefb;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+      position: relative;
+    }
+
+    .carousel {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .carousel-track-wrapper { overflow: hidden; width: 100%; }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: 1em;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 6px;
+      margin: auto;
+    }
+
+    .caption {
+      margin-top: 0.5em;
+      font-size: 0.9rem;
+      color: #6e6e6e;
+      font-style: italic;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      padding: 0.1em 0.3em;
+      cursor: pointer;
+      border-radius: 10%;
+      z-index: 1;
+    }
+
+    .carousel-btn.prev { left: 0.5em; }
+    .carousel-btn.next { right: 0.5em; }
+
+    .carousel-btn:hover { background: rgba(0,0,0,0.6); }
+
+    .cooking-collage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-auto-rows: 160px;
+      gap: 0.5em;
+      margin: 2em auto 0;
+      max-width: 1100px;
+      padding: 0 1em;
+      grid-auto-flow: dense;
+    }
+
+    .cooking-tile {
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 6px;
+      position: relative;
+    }
+
+    .cooking-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .cooking-tile:hover img {
+      transform: scale(1.05);
+    }
+
+    .cooking-tile::after {
+      content: attr(data-caption);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 0.4em;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      pointer-events: none;
+    }
+
+    .cooking-tile:hover::after {
+      opacity: 1;
+    }
+
+    .cooking-tile.wide { grid-column: span 2; }
+    .cooking-tile.tall { grid-row: span 2; }
+
+    .cooking-modal {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(10, 10, 10, 0.85);
+      padding-top: 60px;
+      text-align: center;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    .cooking-modal img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 6px;
+      margin-bottom: 1em;
+    }
+
+    .cooking-modal p {
+      color: #ddd;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1em;
+      right: 1.5em;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .cooking-row {
+        flex-direction: column;
+        gap: 1.5em;
+        padding: 1em 1em 2em;
+      }
+
+      .cooking-collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 90px;
+        padding: 0 0.5em;
+      }
+
+      .carousel-slide img {
+        max-height: 260px;
+      }
+
+      .carousel-btn {
+        font-size: 1.2rem;
+        padding: 0.3em 0.5em;
+      }
+
+      .caption {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const track = document.querySelector('#carousel-track');
+      if (track) {
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+    }
+
+    window.plusSlides = function (n) {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+      currentIndex = (currentIndex + n + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showSlide(currentIndex);
+
+      setInterval(() => {
+        window.plusSlides(1);
+      }, 5000);
+
+      document.querySelectorAll('.cooking-tile').forEach(tile => {
+        tile.addEventListener('click', () => {
+          const modal = document.getElementById('cookingModal');
+          const modalImg = document.getElementById('modalImg');
+          const modalCaption = document.getElementById('modalCaption');
+
+          modalImg.src = tile.dataset.img;
+          modalCaption.textContent = tile.dataset.caption;
+          modal.style.display = 'block';
+        });
+      });
+
+      window.closeModal = function () {
+        document.getElementById('cookingModal').style.display = 'none';
+      };
+    });
+  </script>
 </Layout>
